@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Inconsolata&family=JetBrains+Mono:wght@200&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  justify-content: space-between;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+  color: whitesmoke;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  width: 100%;
+  user-select: none;
+  z-index: 2;
+}
+
+.navbar h1 {
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.navbar h1:first-child {
+  font-size: 35px;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.buttonsDiv{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+.buttonsDiv button{
+  font-size: 22px;
+  font-family: monospace;
+  border: none;
+  background-color: #adaaaa;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 15px;
+}
+.buttonsDiv button:hover:not(.buttonsDiv button:disabled) {
+  background-color: #9e9696;
+}
+
+button:disabled {
+  font-weight: bolder;
+}
+
+.download-video{
+  display: block;
+  margin: auto;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  font-size: 22px;
+  font-family: monospace;
+  border: none;
+  background-color: #adaaaa;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.videoDiv{
+  display: none;
+}
+
+.sidebar {
+  position: absolute;
+  height: 100%;
+  width: 18%;
+  right: -100%;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+  top: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-animate {
+  animation: sidebar 600ms;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.closeBtn {
+  font-size: 50px;
+  cursor: pointer;
+}
+.closeBtn:hover {
+  color: black;
+}
+
+.closeSidebar {
+  animation: close 600ms;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes close {
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: -100%;
+  }
+}
+
+@keyframes sidebar {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: -1%;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  color: whitesmoke;
+}
+
+.header .heading {
+  font-size: 40px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+}
+
+.filterBtn {
+  font-size: 25px;
+  padding: 1px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  width: 95%;
+  text-align: center;
+  cursor: pointer;
+  background-color: whitesmoke;
+  margin: 5px auto;
+  color: black;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: rgb(182, 171, 171);
+}
+
+.filterBtn:hover {
+  background-color: rgb(197, 195, 195);
+}
+
+.filters {
+  overflow-y: scroll;
+  width: 90%;
+  height: 85%;
+}
+
+.filters::-webkit-scrollbar,body::-webkit-scrollbar {
+  display: none;
+}
+
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.line {
+  width: 90%;
+  height: 8%;
+  background-color: black;
+}
+
+.hamburgerIcon:hover > .line {
+  background-color: whitesmoke;
+}
+.hamburgerIcon:hover {
+  border-color: whitesmoke;
+}
+
+.line-linear {
+  width: 100%;
+  background-color: whitesmoke;
+  height: 1px;
+  margin-bottom: 10px;
+}
+
+.myVideo{
+  margin-top: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}

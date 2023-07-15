@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 onclick="window.location.reload()">Visualizer</h1>
+            <div class="hamburgerIcon">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+    </nav>
+    <div class="container">
+        <canvas class="canvas" oncontextmenu="return false;" ></canvas>
+    </div>
+ 
+    <div class="buttonsDiv">
+        <button id="settings">FullScreen</button>
+        <button id="cameraBtn">Start Camera</button>
+        <button id="snapBtn" disabled>Take Snapshot</button>
+        <button id="recordingBtn" disabled>Start Recording</button>
+    </div>
+
+    <div class="sidebar">
+        <div class="header">
+            <div class="heading">Filters</div>
+            <div class="closeBtn">&Cross;</div>
+        </div>
+        <div class="line-linear"></div>
+        <div class="filters"></div>
+    </div>
+    <div class="videoDiv">
+        <video controls class="myVideo" id="myVideo" ></video>
+        <button class="download-video">Download</button>
+    </div>
+
+</body>
+<script type="module" src="./JavaScript/script.js"></script>
+</html>
